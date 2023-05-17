@@ -6,8 +6,85 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+html, body, #root{
+	box-sizing:border-box;
+	display:flex;
+	width:100%;
+	height:100%;
+	margin:0;
+	background-color:#f1f2f6;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+html, body, #root * {
+	box-sizing:border-box;
+	background-color:#f1f2f6;
+}
+#rootPage{
+	display:flex;
+	width:100%;
+	height:100%;
+}
+#sidebar{
+	display:flex;
+	flex-direction:column;
+	flex:1;
+	background-color:white;
+	justify-content:center;
+	padding:1rem;
+	background-color:#f1f2f6;
+	border-right: solid 0.5px grey;
+}
+#sidebarHeader{
+	display:flex;
+	flex:1;
+	width:100%;
+	justify-content:center;
+	align-items:center;
+	border-radius:5%;
+	background-color:white;
+}
+#sidebarHeader h2{
+	background:white;
+}
+#sidebarList{
+	display:flex;
+	flex:5;
+	flex-direction:column;
+	align-items:center;
+}
+#listItem{
+	text-decoration:none;
+	list-style:none;
+	border-radius:5px;
+
+}
+#sidebarListLink{
+	display:flex;
+	background-color: white;
+	width:80%;
+	flex:1;
+	justify-content:center;
+	align-items:center;
+	border-radius:50px;
+	margin:2rem;
+	transition: background-color 1.5s ;
+	max-height:15%;
+	text-decoration:none;
+}
+#sidebarListSpan{
+	color:black;
+	text-decoration:none;
+	background:white;
+	border-radius:5px;
+	font-size:1.3rem;
+}
+#sidebarListLink:hover{
+	background-color:grey;
+	cursor:pointer;
+}
+#mainContent{
+	flex:4;
 }
