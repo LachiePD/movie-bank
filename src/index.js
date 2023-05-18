@@ -9,7 +9,7 @@ import TrendingPage from './routes/TrendingPage.jsx';
 import NowPlayingPage from './routes/NowPlayingPage.jsx';
 import Top100Page from './routes/Top100Page.jsx';
 import ExplorePage from './routes/ExplorePage.jsx';
-
+import {getNowPlaying} from './api/api.jsx';
 const router = createBrowserRouter([{
 	path:'/',
 	element:<RootPage/>,
@@ -18,6 +18,7 @@ const router = createBrowserRouter([{
 		path:'/Now Playing',
 		element:<NowPlayingPage/>,
 		errorElement:<ErrorPage/>,	
+		loader:getNowPlaying,
 	},
 		{
 			path:'Trending',

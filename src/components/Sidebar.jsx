@@ -13,7 +13,7 @@ const Sidebar = () =>{
                 <div id="sidebarList">
                         {listOptions.map((ele, index) =>{
                                 return(
-					<Link id="sidebarListLink"to={`/${ele}`}>
+					<Link id="sidebarListLink"to={`/${ele}`} key={index}>
 		                       <li id="listItem" key={index}>
                       			<span id='sidebarListSpan'>{ele}</span>
 					</li>
