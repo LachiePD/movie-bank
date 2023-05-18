@@ -1,12 +1,28 @@
 import React from 'react';
 import {useLoaderData} from 'react-router-dom';
+import MovieBox from '../components/MovieBox.jsx';
 
 const NowPlayingPage =() =>{
 	const apiData= useLoaderData();
-	console.log(apiData);
 	return(
-		<div id="NowPlayingPage">
-Hey		</div>
+		<div id="nowPlayingPage">
+			<div id="nowPlayingHeader">
+		<h2>See Whats On</h2>
+		
+		</div>
+		
+		<div id="nowPlayingPageContent">
+		{apiData.map((movie) =>{
+			return(
+				<MovieBox movie={movie}/>
+				
+			)
+
+		})
+		}
+		</div>
+
+		</div>
 	);
 
 }
