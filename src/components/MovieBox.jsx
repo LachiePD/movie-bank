@@ -6,7 +6,7 @@ const MovieBox = (props) =>{
 	useEffect(()=>{
 		const fetchImageUrl = async() =>{
 		try{
-			const url = await getImageUrl("w500", props.movie.poster_path);
+			const url = await getImageUrl("w342", props.movie.poster_path);
 			setImageUrl(url);
 		}catch(e){console.error(e)}
 		};

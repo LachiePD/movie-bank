@@ -2,7 +2,7 @@ import React from 'react';
 import {useLoaderData} from 'react-router-dom';
 import MovieBox from '../components/MovieBox.jsx';
 
-const NowPlayingPage =() =>{
+const Page =() =>{
 	const apiData= useLoaderData();
 	return(
 		<div id="nowPlayingPage">
@@ -27,4 +27,4 @@ const NowPlayingPage =() =>{
 
 }
 
-export default NowPlayingPage;
+export default Page;

@@ -3,40 +3,39 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import {getNowPlaying, getTopRated, getNowTrending, getExplore} from './api/api.jsx';
 import ErrorPage from './routes/ErrorPage.jsx';
 import RootPage from './routes/RootPage.jsx';
-import TrendingPage from './routes/TrendingPage.jsx';
-import NowPlayingPage from './routes/NowPlayingPage.jsx';
-import Top100Page from './routes/Top100Page.jsx';
-import ExplorePage from './routes/ExplorePage.jsx';
-import {getNowPlaying} from './api/api.jsx';
+import Page from './routes/Page.jsx';
 const router = createBrowserRouter([{
 	path:'/',
 	element:<RootPage/>,
 	errorElement:<ErrorPage/>,
 	children:[{
 		path:'/Now Playing',
-		element:<NowPlayingPage/>,
+		element:<Page/>,
 		errorElement:<ErrorPage/>,	
 		loader:getNowPlaying,
 		
 	},
 		{
 			path:'Trending',
-			element:<TrendingPage/>,
+			element:<Page/>,
 			errorElement:<ErrorPage/>,
+			loader: getNowTrending,
 		},
 		{
-			path:'Top100',
-			element:<Top100Page/>,
+			path:'TopRated',
+			element:<Page/>,
 			errorElement:<ErrorPage/>,
+			loader:getTopRated,
 		},
 		{
 			path:'Explore',
-			element:<ExplorePage/>,
+			element:<Page/>,
 			errorElement:<ErrorPage/>,
+			loader:getExplore,
 		},
-
 	]
 }
 ])

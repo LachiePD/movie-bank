@@ -21,7 +21,26 @@ export const getNowPlaying = async() =>{
 	const data = await response;
 	return data.results;
 }
+export const getTopRated = async() =>{
+	const response = await callCreation("3/movie/top_rated");
+	const data = await response;
+	return data.results;
 
+}
+
+export const getNowTrending = async () =>{
+	const response = await callCreation('3/movie/popular');
+	const data = await response;
+	return data.results;
+}
+export const getExplore = async() => {
+
+	const response = await callCreation('3/movie/upcoming');
+	const data = await response;
+	console.log(data.results);
+	return data.results;
+
+}
 export const getImageUrl = async (size, path)=>{
 	try{
 		const res = await getConfig();
@@ -31,5 +50,4 @@ export const getImageUrl = async (size, path)=>{
 		const imageUrl = `${baseUrl}${size}${path}`;
 		return await imageUrl;
 	}catch(e){console.error(e)}
-
 }

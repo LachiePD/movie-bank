@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 
 const Sidebar = () =>{
-	const listOptions = ["Now Playing", "Trending", "Top100", "Explore"];
+	const listOptions = ["Now Playing", "Trending", "TopRated", "Explore"];
 	const navigate = useNavigate();
 	return(
 <div id="sidebar">

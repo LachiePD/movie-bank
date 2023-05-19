@@ -105,10 +105,12 @@ html, body, #root * {
 	padding:2rem;
 	display:flex;
 	gap:2rem;
-	flex-direction:column;
+	flex-direction:row;
+	flex-wrap:wrap;
 	align-items:center;
 }
 .movieBox{
+	flex:1;
 	display:flex;
 	border-radius:5px;
 	padding:2rem;
@@ -116,17 +118,17 @@ html, body, #root * {
 	flex-direction:column;
 	align-items:center;
 	width:80%;
-
+	gap:2rem;
 }
 .movieBoxContent{
 	width:80%;
 	font:1rem;
 	background-color:white;
-	flex:3;
 	margin:5%;
 	width:90%;
 	padding:1rem;
 	border-radius:5px;
+	flex:1;
 }
 .movieBoxHeader{
 	background-color:white;
@@ -135,5 +137,8 @@ html, body, #root * {
 	justify-content:center;
 	text-align:center;
 	border-radius: 5px;
-	
 }
+.movieBoxImage{
+	flex:3;
+}
+
