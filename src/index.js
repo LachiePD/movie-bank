@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createContext} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -7,6 +7,9 @@ import {getNowPlaying, getTopRated, getNowTrending, getExplore} from './api/api.
 import ErrorPage from './routes/ErrorPage.jsx';
 import RootPage from './routes/RootPage.jsx';
 import Page from './routes/Page.jsx';
+
+export const HeaderContext = createContext("See whats on...");
+
 const router = createBrowserRouter([{
 	path:'/',
 	element:<RootPage/>,

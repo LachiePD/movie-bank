@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {useLoaderData} from 'react-router-dom';
 import MovieBox from '../components/MovieBox.jsx';
-
+import {HeaderContext} from '../index.js';
 const Page =() =>{
+	const {header, setHeader}= useContext(HeaderContext);
+	console.log(header);
 	const apiData= useLoaderData();
 	return(
 		<div id="nowPlayingPage">
 			<div id="nowPlayingHeader">
-		<h2>See Whats On</h2>
+		<h2>{header}</h2>
 		
 		</div>
 		
