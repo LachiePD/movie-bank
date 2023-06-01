@@ -5,7 +5,6 @@ import {HeaderContext} from '../index.js';
 
 const RootPage = () =>{
 	
-
 	const [header, setHeader] = useState("See whats on...");
 	return(
 		<HeaderContext.Provider value={{header, setHeader}}>
